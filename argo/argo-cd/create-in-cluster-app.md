@@ -2,7 +2,7 @@
 CLI
 ```
 argocd app create --name test \
---repo https://github.com/marcel-dempers/docker-development-youtube-series \
+--repo https://github.com/zacwdev/argo-examples \
 --dest-server https://kubernetes.default.svc \
 --dest-namespace marcel --path kubernetes
 ```
@@ -18,11 +18,10 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/marcel-dempers/docker-development-youtube-series.git
+    repoURL: https://github.com/zacwdev/argo-examples.git
     targetRevision: HEAD
     path: argo/example-app
   destination:
     server: https://kubernetes.default.svc
     namespace: marcel
 ```
-
