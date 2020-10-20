@@ -4,7 +4,7 @@ CLI
 argocd app create --name test \
 --repo https://github.com/zacwdev/argo-examples \
 --dest-server https://kubernetes.default.svc \
---dest-namespace marcel --path kubernetes
+--dest-namespace zacw --path kubernetes
 ```
 
 YAML
@@ -14,7 +14,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test
-  namespace: marcel
+  namespace: zacw
 spec:
   project: default
   source:
@@ -23,5 +23,5 @@ spec:
     path: argo/example-app
   destination:
     server: https://kubernetes.default.svc
-    namespace: marcel
+    namespace: zacw
 ```
