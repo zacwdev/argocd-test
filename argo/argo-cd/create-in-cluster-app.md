@@ -2,7 +2,7 @@
 CLI
 ```
 argocd app create --name test \
---repo https://github.com/zacwdev/argo-examples \
+--repo https://github.com/zacwdev/argocd-test \
 --dest-server https://kubernetes.default.svc \
 --dest-namespace zacw --path kubernetes
 ```
@@ -18,7 +18,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/zacwdev/argo-examples.git
+    repoURL: https://github.com/zacwdev/argocd-test.git
     targetRevision: HEAD
     path: argo/example-app
   destination:
